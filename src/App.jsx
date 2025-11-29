@@ -1,14 +1,16 @@
+import AppRoutes from "./routes";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-import './App.css'
 
 function App() {
-
-
   return (
     <>
- <h1>hello Pran Urja hello</h1>
+      <Navbar />
+      <AppRoutes />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

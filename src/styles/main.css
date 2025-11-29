@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ✅ BRAND PRIMARY COLORS */
+    --color-primary: #D81B60;        /* Rose Pink */
+    --color-secondary: #F8BBD0;      /* Soft Blush Pink */
+    --color-accent: #C9A227;         /* Royal Gold */
+    --color-dark: #4A001F;           /* Wine Red */
+  
+    /* ✅ BACKGROUND COLORS */
+    --color-background: #FFF5F7;    /* Rose White */
+    --color-card-bg: #FFFFFF;       /* White Cards */
+  
+    /* ✅ TEXT COLORS */
+    --color-text-main: #2B0012;     /* Deep Plum */
+    --color-text-muted: #8E6E79;    /* Rose Grey */
+    --color-text-light: #FFFFFF;   /* White Text */
+  
+    /* ✅ BORDER & UI COLORS */
+    --color-border: #F2C6D3;        /* Light Rose Border */
+    --color-shadow: rgba(216, 27, 96, 0.15);
+  
+    /* ✅ STATUS COLORS */
+    --color-success: #2ECC71;
+    --color-warning: #F39C12;
+    --color-error: #E74C3C;
+  
+    /* ✅ BUTTON COLORS */
+    --btn-primary-bg: var(--color-primary);
+    --btn-primary-text: #FFFFFF;
+  
+    --btn-secondary-bg: var(--color-secondary);
+    --btn-secondary-text: var(--color-text-main);
+  
+    --btn-accent-bg: var(--color-accent);
+    --btn-accent-text: var(--color-dark);
+}
