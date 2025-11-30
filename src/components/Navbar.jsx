@@ -16,7 +16,7 @@ export default function Navbar() {
           <NavLink to="/" end className="nav-link">Home</NavLink>
           <NavLink to="/products" className="nav-link">Shop All</NavLink>
           <NavLink to="/gifts" className="nav-link">Gifting</NavLink>
-          <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
+          <NavLink to="/about" className="nav-link">About Us</NavLink>
         </div>
 
         {/* ✅ CENTER LOGO */}

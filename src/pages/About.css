@@ -1,0 +1,169 @@
+/* About.css */
+
+.about-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+/* ✅ ABOUT SECTION */
+.about-section {
+  max-width: 900px;
+  text-align: center;
+  /* Keep background image properties */
+  background-image: url('../assets/images/contactbg.png'); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Add these for the overlay effect */
+  position: relative; /* Needed for the pseudo-element to position correctly */
+  z-index: 1; /* Ensures content is above the overlay */
+  padding: 40px;
+  border-radius: 12px;
+  color: #fff; /* Keep text white for contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for extra readability */
+  overflow: hidden; /* Important to contain the pseudo-element within the rounded corners */
+}
+
+/* Pseudo-element for the semi-transparent overlay */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: -1; /* Puts the overlay behind the content but in front of the background image */
+  border-radius: inherit; /* Ensures overlay respects parent's border-radius */
+}
+
+
+.brand-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: inherit;
+  margin-bottom: 15px;
+}
+
+/* ✅ WHY CHOOSE SECTION */
+.why-section {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.why-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* ✅ Individual Benefit Cards */
+.why-card {
+  background: beige;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/* ✅ Hover Effect: Pop + Color Change */
+.why-card:hover {
+  transform: translateY(-6px) scale(1.02);   /* ✅ Pop up slight */
+  background: #111111;                       /* ✅ Dark background */
+  color: #ffffff;                            /* ✅ Text turns white */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);   /* ✅ Strong shadow */
+}
+
+/* ✅ Keep heading visible on dark hover */
+.why-card:hover h3,
+.why-card:hover p {
+  color: #ffffff;
+}
+
+
+.why-card h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ✅ CONTACT SECTION */
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hours-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .why-title {
+    font-size: 24px;
+  }
+
+  .why-card h3 {
+    font-size: 16px;
+  }
+
+  .contact-title,
+  .hours-title {
+    font-size: 20px;
+  }
+}
