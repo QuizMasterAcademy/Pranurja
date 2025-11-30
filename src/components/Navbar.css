@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 10px 60px;
+    padding: 5px 60px;
   }
   
   /* ✅ LEFT NAV LINKS */
@@ -37,7 +37,7 @@
   }
   
   .nav-logo img {
-    height: 80px;
+    height: 85px;
     width: auto;
     object-fit: contain;
     filter: contrast(1.2) brightness(1.05);
@@ -107,21 +107,59 @@
   }
   
   /* ✅ MOBILE */
-  @media (max-width: 768px) {
-    .ajmal-style-nav {
-      grid-template-columns: 1fr;
-      gap: 14px;
-      text-align: center;
-    }
-  
-    .nav-left,
-    .nav-right {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  
-    .nav-logo img {
-      height: 60px;
-    }
+  /* ✅ HAMBURGER ICON */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* ✅ MOBILE MENU FULL WIDTH */
+/* ✅ MOBILE VIEW: ONLY LOGO + HAMBURGER */
+@media (max-width: 768px) {
+
+  .ajmal-style-nav {
+    grid-template-columns: auto 1fr auto;
+    padding: 12px 16px;
   }
-  
+
+  /* ✅ SHOW HAMBURGER */
+  .hamburger {
+    display: block;
+  }
+
+  /* ✅ HIDE LEFT MENU BY DEFAULT */
+  .nav-left {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 245, 247, 0.98);
+    flex-direction: column;
+    gap: 22px;
+    padding: 30px 0;
+    display: none;   /* ✅ Hidden by default */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  /* ✅ SHOW MENU WHEN HAMBURGER IS OPEN */
+  .nav-left.open {
+    display: flex;
+  }
+
+  /* ✅ HIDE ALL RIGHT ICONS EXCEPT HAMBURGER */
+  .nav-right .mui-icon,
+  .cart-icon-wrapper {
+    display: none;
+  }
+
+  /* ✅ CENTER LOGO PROPERLY */
+  .nav-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-logo img {
+    height: 55px;
+  }
+}

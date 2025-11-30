@@ -5,9 +5,10 @@ import "./Home.css";
 import img1 from "../assets/images/branding.png";
 import img2 from "../assets/images/orange.png";
 import img3 from "../assets/images/wood.png";
+import img4 from "../assets/images/homebg.png";
 
 const Home = () => {
-  const images = [img3,img1, img2 ];
+  const images = [img3,img1, img2,img4 ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // ✅ Auto slider logic
