@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import "./Home.css";
 
 // ✅ Import your 3 images
-import img1 from "../assets/images/branding.png";
-import img2 from "../assets/images/orange.png";
-import img3 from "../assets/images/wood.png";
-import img4 from "../assets/images/homebg.png";
+import img1 from "../assets/images/branding.webp";
+import img2 from "../assets/images/orange.webp";
+import img3 from "../assets/images/wood.webp";
+import img4 from "../assets/images/homebg.webp";
 
 const Home = () => {
   const images = [img3,img1, img2,img4 ];

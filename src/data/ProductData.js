@@ -1,13 +1,14 @@
-import IA1 from "../assets/Products/Cultural/IA1.png"
-import IA2 from "../assets/Products/Cultural/IA2.png"
-import IA3 from "../assets/Products/Cultural/IA3.png"
-import OS1 from "../assets/Products/Cultural/OS1.png"
-import OS2 from "../assets/Products/Cultural/OS2.png"
-import SE1 from "../assets/Products/Cultural/SE1.png"
+import IA1 from "../assets/Products/Cultural/IA1.webp"
+import IA2 from "../assets/Products/Cultural/IA2.webp"
+import IA3 from "../assets/Products/Cultural/IA3.webp"
+import OS1 from "../assets/Products/Cultural/OS1.webp"
+import OS2 from "../assets/Products/Cultural/OS2.webp"
+import SE1 from "../assets/Products/Cultural/SE1.webp"
 import SE2 from "../assets/Products/Cultural/SE2.png"
 import SE3 from "../assets/Products/Cultural/SE3.png"
-import HR1 from "../assets/Products/Spritual/HR1.png"
 
+
+import HR1 from "../assets/Products/Spritual/HR1.png"
 import HR2 from "../assets/Products/Spritual/HR2.png"
 import HR3 from "../assets/Products/Spritual/HR3.png"
 import NM1 from "../assets/Products/Spritual/NM1.png"
@@ -46,7 +47,7 @@ import SB3 from "../assets/Products/Food/SB3.png"
 import AN1 from "../assets/Products/Food/AN1.png"
 import AN2 from "../assets/Products/Food/AM2.png"
 
-import Howtouse from "../assets/images/use.png"
+import Howtouse from "../assets/images/use.webp"
 
 
 
@@ -277,90 +278,90 @@ const productData = [
         ]
     },
 
-    {
-        productType: "Roll On",
-        categories: [
-            {
-                categoryName: "Travel",
-                products: [
-                    {
-                        id: 3,
-                        name: "Ocean Drive",
-                        price: 399,
-                        discountPrice: 349,
-                        fragrance: "Cool Marine",
-                        images: [
-                            "/images/rollon/travel1-1.jpg",
-                            "/images/rollon/travel1-2.jpg",
-                            "/images/rollon/travel1-3.jpg"
-                        ]
-                    }
-                ]
-            },
-            {
-                categoryName: "Emotion",
-                products: [
-                    {
-                        id: 4,
-                        name: "Calm Soul",
-                        price: 429,
-                        discountPrice: 379,
-                        fragrance: "Lavender & Musk",
-                        images: [
-                            "/images/rollon/emotion1-1.jpg",
-                            "/images/rollon/emotion1-2.jpg",
-                            "/images/rollon/emotion1-3.jpg"
-                        ]
-                    }
-                ]
-            },
-            { categoryName: "Food", products: [] },
-            { categoryName: "Cultural", products: [] },
-            { categoryName: "Spiritual", products: [] }
-        ]
-    },
+    // {
+    //     productType: "Roll On",
+    //     categories: [
+    //         {
+    //             categoryName: "Travel",
+    //             products: [
+    //                 {
+    //                     id: 3,
+    //                     name: "Ocean Drive",
+    //                     price: 399,
+    //                     discountPrice: 349,
+    //                     fragrance: "Cool Marine",
+    //                     images: [
+    //                         "/images/rollon/travel1-1.jpg",
+    //                         "/images/rollon/travel1-2.jpg",
+    //                         "/images/rollon/travel1-3.jpg"
+    //                     ]
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             categoryName: "Emotion",
+    //             products: [
+    //                 {
+    //                     id: 4,
+    //                     name: "Calm Soul",
+    //                     price: 429,
+    //                     discountPrice: 379,
+    //                     fragrance: "Lavender & Musk",
+    //                     images: [
+    //                         "/images/rollon/emotion1-1.jpg",
+    //                         "/images/rollon/emotion1-2.jpg",
+    //                         "/images/rollon/emotion1-3.jpg"
+    //                     ]
+    //                 }
+    //             ]
+    //         },
+    //         { categoryName: "Food", products: [] },
+    //         { categoryName: "Cultural", products: [] },
+    //         { categoryName: "Spiritual", products: [] }
+    //     ]
+    // },
 
-    {
-        productType: "Perfume",
-        categories: [
-            { categoryName: "Travel", products: [] },
-            { categoryName: "Food", products: [] },
-            { categoryName: "Emotion", products: [] },
-            {
-                categoryName: "Cultural",
-                products: [
-                    {
-                        id: 5,
-                        name: "Royal Oud",
-                        price: 1299,
-                        discountPrice: 1099,
-                        fragrance: "Oud & Spice",
-                        images: [
-                            "/images/perfume/cultural1-1.jpg",
-                            "/images/perfume/cultural1-2.jpg",
-                            "/images/perfume/cultural1-3.jpg"
-                        ]
-                    }
-                ]
-            },
-            {
-                categoryName: "Spiritual",
-                products: [
-                    {
-                        id: 6,
-                        name: "Temple Mist",
-                        price: 999,
-                        discountPrice: 849,
-                        fragrance: "Sandalwood & Dhoop",
-                        images: [
-                            "/images/perfume/spiritual1-1.jpg",
-                            "/images/perfume/spiritual1-2.jpg",
-                            "/images/perfume/spiritual1-3.jpg"
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+    // {
+    //     productType: "Perfume",
+    //     categories: [
+    //         { categoryName: "Travel", products: [] },
+    //         { categoryName: "Food", products: [] },
+    //         { categoryName: "Emotion", products: [] },
+    //         {
+    //             categoryName: "Cultural",
+    //             products: [
+    //                 {
+    //                     id: 5,
+    //                     name: "Royal Oud",
+    //                     price: 1299,
+    //                     discountPrice: 1099,
+    //                     fragrance: "Oud & Spice",
+    //                     images: [
+    //                         "/images/perfume/cultural1-1.jpg",
+    //                         "/images/perfume/cultural1-2.jpg",
+    //                         "/images/perfume/cultural1-3.jpg"
+    //                     ]
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             categoryName: "Spiritual",
+    //             products: [
+    //                 {
+    //                     id: 6,
+    //                     name: "Temple Mist",
+    //                     price: 999,
+    //                     discountPrice: 849,
+    //                     fragrance: "Sandalwood & Dhoop",
+    //                     images: [
+    //                         "/images/perfume/spiritual1-1.jpg",
+    //                         "/images/perfume/spiritual1-2.jpg",
+    //                         "/images/perfume/spiritual1-3.jpg"
+    //                     ]
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // }
 ];
 export default productData;  
