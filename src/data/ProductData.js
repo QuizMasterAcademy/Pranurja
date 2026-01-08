@@ -86,7 +86,7 @@ const productData = [
                         id: 1,
                         name: "Imperial Amber",
                         price: 399,
-                        discountPrice: 249,
+                        discountPrice: 1,
                         description: "(Red Magic)A luxurious blend inspired by ancient royal fragrances with deep amber warmth.",
                         fragrance: "Sweet + smoky + sensual",
                         images: [

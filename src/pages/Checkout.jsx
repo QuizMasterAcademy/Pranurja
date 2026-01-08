@@ -73,7 +73,12 @@ const Checkout = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // ✅ SEND SAME GRAND TOTAL
-        body: JSON.stringify({ amount: grandTotal }),
+        body: JSON.stringify({
+          amount: grandTotal,
+          customer: formData,
+          cartItems: cartItems
+        })
+        
       });
 
       const order = await res.json();

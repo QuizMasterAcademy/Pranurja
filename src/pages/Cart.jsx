@@ -19,7 +19,7 @@ const Cart = () => {
   const platformFee = +(subTotal * 0.025).toFixed(2);
 
   // ✅ DELIVERY CHARGE LOGIC
-  const deliveryCharge = subTotal >= 749 ? 0 : 40;
+  const deliveryCharge = subTotal >= 749 ? 0 : 0;
 
   // ✅ FINAL TOTAL
   const grandTotal = subTotal + platformFee + deliveryCharge;
