@@ -34,7 +34,7 @@ const Checkout = () => {
   // ✅ OPEN RAZORPAY
   const openRazorpay = (order) => {
     const options = {
-      key: "rzp_test_XXXXXXXXXX",
+      key: "rzp_live_S1JADME1QiIaCB",
       amount: order.amount,
       currency: "INR",
       order_id: order.id,
