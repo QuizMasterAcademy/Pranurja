@@ -21,7 +21,7 @@ const Checkout = () => {
   );
 
   const platformFee = +(subTotal * 0.025).toFixed(2);
-  const deliveryCharge = subTotal >= 749 ? 0 : 40;
+  const deliveryCharge = subTotal >= 749 ? 0 : 0;
   const grandTotal = subTotal + platformFee + deliveryCharge;
 
   const handleChange = (e) => {
