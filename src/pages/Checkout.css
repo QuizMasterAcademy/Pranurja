@@ -1,0 +1,117 @@
+/* ===== CHECKOUT PAGE ===== */
+
+.checkout-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .checkout-page h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  /* ===== LAYOUT ===== */
+  
+  .checkout-box {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+  }
+  
+  /* ===== FORM ===== */
+  
+  .checkout-form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .checkout-form input,
+  .checkout-form textarea {
+    width: 100%;
+    padding: 14px 12px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+  
+  .checkout-form textarea {
+    min-height: 100px;
+    resize: none;
+  }
+  
+  .checkout-form input:focus,
+  .checkout-form textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 1px rgba(46, 125, 50, 0.3);
+  }
+  
+  /* ===== SUMMARY ===== */
+  
+  .checkout-summary {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .checkout-summary h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .checkout-summary p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .checkout-summary h4 {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* ===== PAY BUTTON ===== */
+  
+  .checkout-summary button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 14px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .checkout-summary button:hover {
+    background: #2e7d32;
+    transform: translateY(-1px);
+  }
+  
+  /* ===== MOBILE ===== */
+  
+  @media (max-width: 768px) {
+    .checkout-box {
+      grid-template-columns: 1fr;
+    }
+  
+    .checkout-page {
+      margin: 20px auto;
+    }
+  
+    .checkout-page h2 {
+      font-size: 24px;
+    }
+  }
+  

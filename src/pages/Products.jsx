@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ProductData from "../data/ProductData";
 import "./Product.css";
+import { CartContext } from "../context/CartContext";
 
-import InstagramIcon from '@mui/icons-material/Instagram';
 const Product = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [activeImage, setActiveImage] = useState("");
-  const [showCartDialog, setShowCartDialog] = useState(false);
+
+  const { addToCart } = useContext(CartContext); // ✅ USE CONTEXT
 
   return (
     <div className="product-page">
@@ -21,7 +22,9 @@ const Product = () => {
               <div key={catIndex}>
                 {category.products.length > 0 && (
                   <>
-                    <h3 className="category-title">{category.categoryName}</h3>
+                    <h3 className="category-title">
+                      {category.categoryName}
+                    </h3>
 
                     <div className="product-grid">
                       {category.products.map((product) => (
@@ -45,9 +48,10 @@ const Product = () => {
                           </div>
 
                           <div className="btn-group">
+                            {/* ✅ ADD TO CART WORKING */}
                             <button
                               className="add-btn"
-                              onClick={() => setShowCartDialog(true)}
+                              onClick={() => addToCart(product)}
                             >
                               Add to Cart
                             </button>
@@ -73,11 +77,14 @@ const Product = () => {
         ))}
       </div>
 
-      {/* ✅ ✅ ✅ PRODUCT VIEW MODAL */}
+      {/* ✅ PRODUCT VIEW MODAL */}
       {selectedProduct && (
         <div className="modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-            <span className="close-btn" onClick={() => setSelectedProduct(null)}>
+            <span
+              className="close-btn"
+              onClick={() => setSelectedProduct(null)}
+            >
               ✖
             </span>
 
@@ -114,36 +121,6 @@ const Product = () => {
                 />
               ))}
             </div>
-          </div>
-        </div>
-      )}
-
-      {/* ✅ ✅ ✅ ADD TO CART DIALOG */}
-      {showCartDialog && (
-        <div className="modal-overlay" onClick={() => setShowCartDialog(false)}>
-          <div className="cart-dialog" onClick={(e) => e.stopPropagation()}>
-            <span
-              className="close-btn"
-              onClick={() => setShowCartDialog(false)}
-            >
-              ✖
-            </span>
-
-            <h2>Website Under Construction 🚧</h2>
-            <p className="cart-text">
-              To buy this product, please click on the Instagram logo below and
-              purchase directly.
-            </p>
-
-            <a
-              href="https://www.instagram.com/pran_urja?igsh=YnMxMnBhZndtNTlm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-           <InstagramIcon sx={{ fontSize: 100, color: "#E1306C" }} />
-
-
-            </a>
           </div>
         </div>
       )}
