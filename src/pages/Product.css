@@ -117,14 +117,40 @@
   }
   
   /* ✅ BUTTONS */
-  .add-btn {
-    background: black;
-    color: #fff;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+ /* ✅ ADD TO CART BUTTON */
+.add-btn {
+  background: black;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  /* 🔥 smooth animation */
+  transition: 
+    transform 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* hover effect */
+.add-btn:hover {
+  background-color: #222;
+}
+
+/* ✅ CLICK EFFECT (THIS IS WHAT YOU WANT) */
+.add-btn:active {
+  transform: scale(0.94);        /* button press */
+  background-color: #2e7d32;     /* green flash */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3) inset;
+}
+
+/* keyboard accessibility */
+.add-btn:focus-visible {
+  outline: 2px solid #2e7d32;
+  outline-offset: 2px;
+}
+
   
   .view-btn {
     background: #555;

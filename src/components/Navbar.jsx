@@ -1,6 +1,9 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { useState, useContext } from "react";
 import "./Navbar.css";
+
+// ✅ CART CONTEXT
+import { CartContext } from "../context/CartContext";
 
 // ✅ MUI ICONS
 import SearchIcon from "@mui/icons-material/Search";
@@ -11,6 +14,15 @@ import CloseIcon from "@mui/icons-material/Close";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // ✅ GET CART DATA
+  const { cartItems, addedItemMsg } = useContext(CartContext);
+
+  // ✅ TOTAL CART COUNT (qty sum)
+  const cartCount = cartItems.reduce(
+    (sum, item) => sum + item.qty,
+    0
+  );
 
   return (
     <header className="header">
@@ -35,8 +47,25 @@ export default function Navbar() {
         <div className="nav-right">
           <SearchIcon className="mui-icon" />
           <PersonOutlineOutlinedIcon className="mui-icon" />
-          <div className="cart-icon-wrapper">
-            <ShoppingCartOutlinedIcon className="mui-icon" />
+
+          {/* ✅ CART ICON */}
+          <div className="cart-wrapper">
+            <Link to="/cart" className="cart-icon-wrapper">
+              <ShoppingCartOutlinedIcon className="mui-icon" />
+
+              {cartCount > 0 && (
+                <span className="cart-count">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+
+            {/* ✅ ADDED ITEM MESSAGE */}
+            {addedItemMsg && (
+              <div className="cart-toast">
+                {addedItemMsg}
+              </div>
+            )}
           </div>
 
           {/* ✅ HAMBURGER ICON (MOBILE) */}
